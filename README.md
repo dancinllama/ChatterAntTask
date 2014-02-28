@@ -17,7 +17,12 @@ The following are dependencies to running the ChatterAntTask via your ANT builds
 
 4.  The ChatterAntTask uses the "Username and Password" oauth authentication build into the JavaChatterRESTApi.  This means the chatter ant task needs to pass in a username, password, client key, and client secret in addition to the instanceUrl (e.g. https://na10.salesforce.com), groupId or Salesforce Id of the Chatter group to post to, and the message to display. 
 
-5.  An example of calling the ChatterAntTask is below:
+5.  To obtain the the client key and client secret, you need to create a "Connected App" in salesforce for the Chatter Ant Task and pass in its client key and secret to the ChatterAntTask.  See here for more info: https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm.
+
+6.  You will also need to pass along your security token with your password if your IP is not trusted on your salesforce org.
+
+
+7.  Now that the connected app is set up, you can call ChatterAntTask with the proper credentials.  An example of calling the ChatterAntTask is below.  Note, that in this example, I'm reading the credentials and other attributes from a properties file.
 
     ```
     <target name="chattermemaybe">

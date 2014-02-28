@@ -11,7 +11,9 @@ The following are dependencies to running the ChatterAntTask via your ANT builds
 
 3.  In your build.xml file for your ANT build, define the Chatter Task similar to below:
 
+    ```
     <taskdef name="chatter" classname="com.salesforce.chatter.ant.ChatterTask" />
+    ```
 
 4.  The ChatterAntTask uses the "Username and Password" oauth authentication build into the JavaChatterRESTApi.  This means the chatter ant task needs to pass in a username, password, client key, and client secret in addition to the instanceUrl (e.g. https://na10.salesforce.com), groupId or Salesforce Id of the Chatter group to post to, and the message to display. 
 

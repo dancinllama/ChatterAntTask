@@ -1,10 +1,12 @@
 ChatterAntTask
 ==============
 
-Ant task for sending Chatter updates to a group
+Description: Ant task for sending Chatter updates to a group
 
-Dependencies:
+The following are dependencies to running the ChatterAntTask via your ANT builds:
+
 1.  Make sure you have ANT set up.  This task was tested with ANT 1.9.2, but should work on earlier versions. (https://ant.apache.org/).  Optionally, you may install ANT on Mac OSX using Homebrew with brew install ant.
+
 2.  ChatterAntTask utilizes the forcedotcom labs JavaChatterRESTapi (https://github.com/forcedotcom/JavaChatterRESTApi) and all of its dependencies.  The JavaChatterRESTApi jar file and its dependent jars may be found in the lib directory. Add each of these jar files to your ANT lib directory prior to running the ChatterAntTask.
 
 3.  In your build.xml file for your ANT build, define the Chatter Task similar to below:

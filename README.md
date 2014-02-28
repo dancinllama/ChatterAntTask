@@ -9,7 +9,7 @@ The following are dependencies to running the ChatterAntTask via your ANT builds
 
 2.  ChatterAntTask utilizes the forcedotcom labs JavaChatterRESTapi (https://github.com/forcedotcom/JavaChatterRESTApi) and all of its dependencies.  The JavaChatterRESTApi jar file and its dependent jars may be found in the lib directory. Add each of these jar files to your ANT lib directory prior to running the ChatterAntTask.
 
-3.  In your build.xml file for your ANT build, define the Chatter Task similar to below:
+3.  In your build.xml file, define the Chatter Task similar to below:
 
     ```
     <taskdef name="chatter" classname="com.salesforce.chatter.ant.ChatterTask" />
@@ -28,9 +28,9 @@ The following are dependencies to running the ChatterAntTask via your ANT builds
     <target name="chattermemaybe">
         <echo>User: ${sfsource.username}</echo>
         <echo>Uri: ${sfsource.serverUri}</echo>
+        <!-- Only outputting the client key and secret for debugging purposes.. not a good idea to leave in place -->
         <echo>Clientkey: ${sfsource.clientKey}</echo>
         <echo>ClientSecret: ${sfsource.clientSecret}</echo>
-        <echo>Deploy Root: ${source.dir}</echo>
         <echo>groupId: ${sfsource.chatterGroupId}</echo>
         <chatter username="${sfsource.username}" password="${sfsource.password}" clientKey="${sfsource.clientKey}" clientSecret="${sfsource.clientSecret}" instanceUrl="${sfsource.serverUri}" groupId="${sfsource.chatterGroupId}" message="Build completed!" />
     </target>

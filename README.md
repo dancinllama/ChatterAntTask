@@ -17,6 +17,7 @@ The following are dependencies to running the ChatterAntTask via your ANT builds
 
 5.  An example of calling the ChatterAntTask is below:
 
+    ```
     <target name="chattermemaybe">
         <echo>User: ${sfsource.username}</echo>
         <echo>Uri: ${sfsource.serverUri}</echo>
@@ -26,4 +27,5 @@ The following are dependencies to running the ChatterAntTask via your ANT builds
         <echo>groupId: ${sfsource.chatterGroupId}</echo>
         <chatter username="${sfsource.username}" password="${sfsource.password}" clientKey="${sfsource.clientKey}" clientSecret="${sfsource.clientSecret}" instanceUrl="${sfsource.serverUri}" groupId="${sfsource.chatterGroupId}" message="Build completed!" />
     </target>
+    ```
 
